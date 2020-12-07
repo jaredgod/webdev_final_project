@@ -19,7 +19,7 @@ function addHighScore(name, score, pass=""){
 }
 
 /*
-returns a single object with a "highscore", "name", and "rank" based on the name
+returns a single object with a "score", "name", and "rank" based on the name
 */
 function getHighScore(name){
   var obj = {
