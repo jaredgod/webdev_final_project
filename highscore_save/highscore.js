@@ -1,12 +1,12 @@
 
 /*
-returns an array of objects with a "highscore", "name", and "rank"
+returns an array of objects with a "score", "name", and "rank"
 */
 function getHighScoreList(){
   var obj = {
     rank: 0,
     name: "",
-    highscore: ""
+    score: 0
   }
   return [obj];
 }
@@ -25,7 +25,7 @@ function getHighScore(name){
   var obj = {
     rank: 0,
     name: "",
-    highscore: ""
+    score: 0
   }
   return obj;
 }
