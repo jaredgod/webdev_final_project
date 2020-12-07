@@ -1,0 +1,26 @@
+{
+  "name": "final-assignment",
+  "version": "1.0.0",
+  "description": "Hunt The Wumpus",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "handlebars views/partials/tile.handlebars -f public/tile.js",
+    "prestart": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaredgod/webdev_final_project.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jaredgod/webdev_final_project/issues"
+  },
+  "homepage": "https://github.com/jaredgod/webdev_final_project#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "handlebars": "^4.7.6"
+  }
+}

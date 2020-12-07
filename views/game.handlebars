@@ -1,0 +1,37 @@
+<body>
+  <header>
+    <h1 id = "Page Title">Wumpus++</h1>
+    <img src= "img_image.jpg" alt = "" id = "High Score Menu">
+  </header>
+
+  <div id = "Main Screen">
+
+    <div id = "Game Screen">
+      {{> gameScreen}}
+    </div>
+
+    <div id = "Controls" >
+      <p>
+      W: move up
+      A: move left
+      S: move down
+      D: move right
+
+      Shift + W: shoot up
+      Shift + A: shoot left
+      Shift + S: shoot down
+      Shift + D: shoot right
+      </p>
+    </div>
+
+    <ul id = "Arrows"></ul>
+
+    <p id = "Timer"></p>
+
+  </div>
+
+  <div id = "High Score Menu">
+    {{> highscoreMenu}}
+  </div>
+
+</body>
