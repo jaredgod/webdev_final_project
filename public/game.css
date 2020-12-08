@@ -1,0 +1,35 @@
+body {
+  margin: 40px;
+}
+
+#tile {
+  background-color: #9F6F48;
+  color: #fff;
+  border-radius: 3px;
+  padding: 15px;
+  font-size: 150%;
+}
+
+#grid {
+  width: 540px;
+  background-color:#999;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(5, 100px);
+  grid-auto-flow: column;
+}
+
+#board td {
+	background-color:#ccc;
+}
+#feedback {
+	background-color:#FFFF99;
+	border:2px solid #cccccc;
+	height:100px;
+	width:230px;
+	padding:10px;
+	position:absolute;
+	top:95px;
+	left:280px;
+}
