@@ -16,6 +16,8 @@ function addHighScore(name, score, pass=""){
   .then(function(response) {
     if (!response.ok) {
       console.log("Could not add high score.");
+      return false;
     }
+    return true;
   });
 }
