@@ -12,7 +12,7 @@ function getHighScoreList(){
 }
 
 /*
-will save a highscore to the highscore.json file.
+will save a highscore to the highscore.json file. returns true if successful. returns false if not
 */
 function addHighScore(name, score, pass=""){
   return;
