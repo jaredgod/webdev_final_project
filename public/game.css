@@ -2,7 +2,7 @@ body {
   margin: 40px;
 }
 
-#tile {
+.tile {
   background-color: #9F6F48;
   color: #fff;
   border-radius: 3px;
@@ -20,9 +20,6 @@ body {
   grid-auto-flow: column;
 }
 
-#board td {
-	background-color:#ccc;
-}
 #feedback {
 	background-color:#FFFF99;
 	border:2px solid #cccccc;
