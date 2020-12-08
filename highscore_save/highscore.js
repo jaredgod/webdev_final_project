@@ -3,12 +3,16 @@
 returns an array of objects with a "highscore", "name", and "rank"
 */
 function getHighScoreList(){
-  var obj = {
-    rank: 0,
-    name: "",
-    highscore: ""
-  }
-  return [obj];
+  var scores = require("highscore.json");
+  var returnList = [];
+  scores.forEach((item, i) => {
+    returnList.push({
+      rank: item.rank,
+      name: item.name,
+      score: item.score
+    });
+  });
+  return returnList;
 }
 
 /*
@@ -19,13 +23,16 @@ function addHighScore(name, score, pass=""){
 }
 
 /*
-returns a single object with a "highscore", "name", and "rank" based on the name
+returns a single object with a "score", "name", and "rank" based on the name
 */
 function getHighScore(name){
   var obj = {
     rank: 0,
     name: "",
-    highscore: ""
+    score: 0
   }
   return obj;
 }
+
+
+console.log(getHighScoreList());
