@@ -1,36 +1,50 @@
 <body>
   <header>
-    <h1 id = "Page Title">Wumpus++</h1>
-    <img src= "img_image.jpg" alt = "" id = "High Score Menu">
+      <span><h1 id = "PageTitle">Wumpus++</h1></span>
+    
+      <div class ="dropdown">
+          <span class=btn><button class = dropbtn type=submit></button></span>
+          <div class="dropdown-content">
+              <a href="#">Highscore</a>
+          </div>
+      </div>
   </header>
 
-  <div id = "Main Screen">
+  <div id = "MainScreen">
 
-    <div id = "Game Screen">
+    <div id = "GameScreen">
       {{> gameScreen}}
     </div>
 
+      
+      
     <div id = "Controls" >
-      <p>
-      W: move up
-      A: move left
-      S: move down
-      D: move right
+        <p id = "up"><img id = "arrows" src= "https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-512.png"> <p id=up>W</p></p>
+      
+    <p id = both>
+        <span id =left> <img id = "arrows" src= "https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-512.png"> A</span>
+        <span id = "right">D <img id = "arrows" src= "https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-512.png"> </span>
+    </p>
+    
+      <p id="down">S</p>
+      <p id = "down"><img id = "arrows" src= "https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-512.png"> </p>     
 
-      Shift + W: shoot up
-      Shift + A: shoot left
-      Shift + S: shoot down
-      Shift + D: shoot right
-      </p>
+      <p>Shift + W: shoot up</p>
+      <p>Shift + A: shoot left</p>
+      <p>Shift + S: shoot down</p>
+      <p>Shift + D: shoot right</p>
+
     </div>
 
+    
+    
     <ul id = "Arrows"></ul>
 
     <p id = "Timer"></p>
 
   </div>
 
-  <div id = "High Score Menu">
+  <div id = "HighScoreMenu">
     {{> highscoreMenu}}
   </div>
 
