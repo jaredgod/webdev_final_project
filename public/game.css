@@ -2,31 +2,39 @@ body {
   margin: 40px;
 }
 
-.tile {
-  background-color: #9F6F48;
-  color: #fff;
-  border-radius: 3px;
-  padding: 15px;
-  font-size: 150%;
+#game {
+  width: 30%;
+  height: auto;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 100px 100px;
+  position: relative;
+}
+
+.game-container{
+    vertical-align: middle;
+    display: table-cell;
 }
 
 #grid {
-  width: 540px;
+  width: 200px;
+  height: 250px;
   background-color:#999;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(5, 100px);
-  grid-template-rows: repeat(5, 100px);
-  grid-auto-flow: column;
 }
 
-#feedback {
+#feed {
 	background-color:#FFFF99;
 	border:2px solid #cccccc;
 	height:100px;
 	width:230px;
 	padding:10px;
-	position:absolute;
 	top:95px;
 	left:280px;
+  margin-top: 75px;
+}
+
+.hidden {
+  display: none;
 }
