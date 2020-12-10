@@ -30,7 +30,7 @@ async function addHighScore(name, score, pass=""){
 //game
 var numbats = 4;
 var numpits = 4;
-var numarrows = 2;
+var numarrows = 4;
 var sizeX = 5;
 var sizeY = 5;
 var playGame = true;
@@ -224,14 +224,14 @@ function movePlayer(x, y){
 function shoot(x, y){
   if(aCount > 0){
     points += 1;
-    updateArrows(aCount-1);
+    updateArrowsGame(aCount-1);
     for(var i = px; x != 0 && i >= 0 && i < sizeX; i += x){
       if(map[i][py].fore == 'w'){
         youWin();
       }
     }
     for(var i = py; y != 0 && i >= 0 && i < sizeY; i += y){
-      if(map[i][py].fore == 'w'){
+      if(map[px][i].fore == 'w'){
         youWin();
       }
     }
@@ -271,25 +271,27 @@ window.addEventListener("keydown", function (event) {
 //IO functions
 function gameOver(){
 playGame = false;
-  //your lose function
+  printMessage("you lose!");
+  init();
 }
 
 function youWin(){
 playGame = false;
-  //your win function
+printMessage("you win!");
+  win(points);
 }
 
 function printMessage(m){
   if(devTest) console.log(m);
   else{
-    //your printmessage function
+    printmessage(m);
   }
 }
 
 function replaceBack(x, y, back){
   if(inRange(x, y)){
     map[x][y].back = back;
-    //your replacebackground function
+    replaceImage(x, y, back);
   }
   else if(devTest) console.log("Error: replaceBack out of bounds: " + x + " " + y);
 }
@@ -297,14 +299,32 @@ function replaceBack(x, y, back){
 function replaceFore(x, y, fore){
   if(inRange(x, y)) {
     map[x][y].fore = fore;
-    //your replaceforeground function
+    replaceImage(x, y, fore);
+
   }
   else if(devTest) console.log("Error: replaceFore out of bounds: " + x + " " + y);
 }
 
-function updateArrows(n){
+function updateArrowsGame(n){
   aCount = n;
-  //your update arrows function
+  updateArrows(n);
 }
 
-//make sure your restart function calls my init function
+
+var winButton = document.getElementById("modal-accept");
+winButton.addEventListener('click', hideBackdrop);
+
+
+function hideBackdrop(event){
+
+  var modalBackdrop = document.getElementById("modal-backdrop");
+  var postBackdrop = document.getElementById("add-post-modal");
+
+  modalBackdrop.classList.add("hidden");
+  postBackdrop.classList.add("hidden");
+
+  var name = document.getElementById('post-text-input').value;
+  var password = document.getElementById('password-input').value;
+  addHighScore(name, recentScore, password);
+  init();
+}

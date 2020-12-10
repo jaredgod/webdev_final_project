@@ -38,3 +38,9 @@ body {
 .hidden {
   display: none;
 }
+
+button#modal-accept {
+  background-image: none;
+  width: 120px;
+  height: 30px;
+}

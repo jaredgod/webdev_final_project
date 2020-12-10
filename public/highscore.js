@@ -25,15 +25,15 @@ module.exports = {
     var updated = false;
     scores.forEach((item, i) => {
       if(item.name == name){
+      updated = true;
         if(item.pass != pass){
           return false;
         }
         else{
-          if(item.score <= score){
+          if(item.score >= score){
             item.score = score;
-            updated = true;
             var pos = i;
-            while(pos > 0 && scores[pos].score > scores[pos-1].score){
+            while(pos > 0 && scores[pos].score < scores[pos-1].score){
               var temp = scores[pos];
               scores[pos] = scores[pos-1];
               scores[pos-1] = temp;
@@ -51,7 +51,7 @@ module.exports = {
       });
       pos = scores.length-1;
       if(pos>0){
-        while(pos > 0 && scores[pos].score > scores[pos-1].score){
+        while(pos > 0 && scores[pos].score < scores[pos-1].score){
           var temp = scores[pos];
           scores[pos] = scores[pos-1];
           scores[pos-1] = temp;
