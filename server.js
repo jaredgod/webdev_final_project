@@ -8,7 +8,7 @@ var hs = require("./public/highscore.js");
 
 var p = parseInt(process.argv.slice(2));
 if(!p){
-  console.log("use port as parameter");
+  console.log("Error: run npm start <port>");
   return;
 }
 
