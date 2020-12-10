@@ -1,6 +1,6 @@
 //will save a highscore to the highscore.json file.
 //password is optional, no password is "".
-function addHighScore(name, score, pass=""){
+async function addHighScore(name, score, pass=""){
 
   var data = {
     name: name,
@@ -9,8 +9,11 @@ function addHighScore(name, score, pass=""){
   }
 
   fetch("/addHighScore", {
-          method: 'PUT',
-          body: JSON.stringify(data)
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
   })
   .then(response => response.json())
   .then(function(response) {

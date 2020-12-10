@@ -1,11 +1,11 @@
 <body>
   <header>
       <span><h1 id = "PageTitle">Wumpus++</h1></span>
-    
+
       <div class ="dropdown">
           <span class=btn><button class = dropbtn type=submit></button></span>
           <div class="dropdown-content">
-              <a href="#">Highscore</a>
+              {{> highscoreMenu}}
           </div>
       </div>
   </header>
@@ -16,18 +16,18 @@
       {{> gameScreen}}
     </div>
 
-      
-      
+
+
     <div id = "Controls" >
         <p id = "up"><img id = "arrows" src= "https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-up-01-512.png"> <p id=up>W</p></p>
-      
+
     <p id = both>
         <span id =left> <img id = "arrows" src= "https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-left-01-512.png"> A</span>
         <span id = "right">D <img id = "arrows" src= "https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-512.png"> </span>
     </p>
-    
+
       <p id="down">S</p>
-      <p id = "down"><img id = "arrows" src= "https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-512.png"> </p>     
+      <p id = "down"><img id = "arrows" src= "https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-512.png"> </p>
 
       <p>Shift + W: shoot up</p>
       <p>Shift + A: shoot left</p>
@@ -36,16 +36,12 @@
 
     </div>
 
-    
-    
+
+
     <ul id = "Arrows"></ul>
 
     <p id = "Timer"></p>
 
-  </div>
-
-  <div id = "HighScoreMenu">
-    {{> highscoreMenu}}
   </div>
 
 </body>
