@@ -35,6 +35,13 @@ function printmessage(str){
     feedList.appendChild(newMessage);
 }
 
+function resetMessage(){
+  var feedList = document.getElementById("feed-list");
+  while (feedList.hasChildNodes()) {
+    feedList.removeChild(feedList.firstChild);
+  }
+}
+
 function win(score){
   //displays a win screen with the score, get name and password
   var str = "Congratulation you won!"

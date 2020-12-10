@@ -39,7 +39,7 @@ var map = [[]];
 var px = 0;
 var py = 0;
 var aCount = numarrows;
-var devTest = true;
+var devTest = false;
 
 
 init();
@@ -193,6 +193,7 @@ function percieve(){
 
 function movePlayer(x, y){
   if(inRange(px + x, py + y)){
+    resetMessage();
     replaceFore(px, py, '0');
     points += 1;
     px += x;
